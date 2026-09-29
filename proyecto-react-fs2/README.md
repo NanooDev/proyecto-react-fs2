@@ -2,7 +2,7 @@
 
 App base con **Vite + React + TypeScript** para FS2. Incluye ruteo con **wouter**, componentes reutilizables con CSS Modules y deploy a **GitHub Pages**.
 
-- Demo: https://docentedev.github.io/fs2-react-app/
+- Demo: https://nanoodev.github.io/proyecto-react-fs2/
 - Rutas: `/`, `/login`, `/register`
 
 ## Inicio rápido

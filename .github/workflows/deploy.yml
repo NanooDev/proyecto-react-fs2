@@ -26,21 +26,24 @@ jobs:
         with:
           node-version: 22
           cache: npm
+          cache-dependency-path: proyecto-react-fs2/package-lock.json
 
       - name: Install dependencies
+        working-directory: proyecto-react-fs2
         run: npm ci
 
       - name: Build
+        working-directory: proyecto-react-fs2
         run: npm run build
 
-      # SPA fallback: permite refresh / deep links (/login, /register) en GitHub Pages
+      # SPA fallback: permite refresh / deep links (/login, /register) en GitHub Pages.
       - name: Add SPA fallback (404.html)
-        run: cp dist/index.html dist/404.html
+        run: cp proyecto-react-fs2/dist/index.html proyecto-react-fs2/dist/404.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: proyecto-react-fs2/dist
 
   deploy:
     environment:

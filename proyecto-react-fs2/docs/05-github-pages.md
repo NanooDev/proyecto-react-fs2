@@ -1,6 +1,6 @@
 # 05 — Deploy en GitHub Pages
 
-Este proyecto usa `base: '/fs2-react-app/'` en `vite.config.ts` y `<Router base={base}>` en `App.tsx`. Así Vite genera rutas correctas para GitHub Pages.
+Este proyecto usa `base: '/proyecto-react-fs2/'` en `vite.config.ts` y `<Router base={base}>` en `App.tsx`. Así Vite genera rutas correctas para GitHub Pages.
 
 `public/.nojekyll` desactiva Jekyll. El workflow de `.github/workflows/deploy.yml` instala dependencias, ejecuta `npm run build`, copia `dist/index.html` como `dist/404.html` para soportar refresh en `/login` y `/register`, y publica el artefacto.
 
