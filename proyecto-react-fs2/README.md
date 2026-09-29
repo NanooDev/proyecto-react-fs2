@@ -1,32 +1,29 @@
-# React + TypeScript + Vite
+# fs2-react-app
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+App base con **Vite + React + TypeScript** para FS2. Incluye ruteo con **wouter**, componentes reutilizables con CSS Modules y deploy a **GitHub Pages**.
 
-Currently, two official plugins are available:
+- Demo: https://docentedev.github.io/fs2-react-app/
+- Rutas: `/`, `/login`, `/register`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Inicio rápido
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Scripts
+
+- `npm run dev`: servidor de desarrollo con HMR.
+- `npm run build`: chequeo TypeScript y build a `dist/`.
+- `npm run preview`: previsualiza el build.
+- `npm run lint`: ejecuta oxlint.
+
+## Estructura
+
+- `src/components/`: componentes reutilizables con su CSS Module.
+- `src/pages/`: vistas asociadas a rutas.
+- `src/App.tsx`: composición del menú y las rutas.
+- `public/`: recursos estáticos.
+- `docs/`: guías del proyecto.
+- `.github/workflows/`: deploy a GitHub Pages.

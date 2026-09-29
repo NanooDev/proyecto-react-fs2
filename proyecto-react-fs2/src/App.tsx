@@ -1,18 +1,22 @@
-import { Link, Route, Switch } from "wouter";
+import { Route, Router, Switch } from "wouter";
+import Home from "./pages/home/Home";
+import Login from "./pages/login/Login";
+import Register from "./pages/register/Register";
+import Menu from "./components/menu/Menu";
+
+// GitHub Pages publica la app dentro de /fs2-react-app/; Router necesita conocer ese prefijo.
+const base = import.meta.env.BASE_URL.replace(/\/$/, "") || "";
 
 const App = () => (
-  <>
-    <Link href="/">Home</Link>
-    <Link href="/login">Login</Link>
-    <Link href="/register">Register</Link>
-
+  <Router base={base}>
+    <Menu />
     <Switch>
-      <Route path="/inbox" component={Home} />
+      <Route path="/" component={Home} />
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
-
       <Route>404: No such page!</Route>
     </Switch>
-  </>
+  </Router>
 );
-export default App
+
+export default App;

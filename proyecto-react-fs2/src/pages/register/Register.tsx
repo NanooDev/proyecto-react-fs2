@@ -1,4 +1,4 @@
-const InboxPage = () => {
+const Register = () => {
   return (
     <>
       <h1>Register</h1>
@@ -6,4 +6,4 @@ const InboxPage = () => {
     );
 };
 
-export default InboxPage;
+export default Register;
