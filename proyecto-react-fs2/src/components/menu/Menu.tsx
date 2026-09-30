@@ -1,22 +1,23 @@
 import { Link } from "wouter";
-import styles from "./Menu.module.css";
 
 const Menu = () => {
     return (
-        <nav className={styles.nav}>
-            <ul className={styles.list}>
-                {/* Link cambia la ruta sin recargar toda la aplicación. */}
-                <li className={styles.item}>
-                    <Link href="/">home</Link>
-                </li>
-                <li className={styles.item}>
-                    <Link href="/login">login</Link>
-                </li>
-                <li className={styles.item}>
-                    <Link href="/register">register</Link>
-                </li>
-            </ul>
-        </nav>
+        <header>
+            <nav>
+                <Link href="/" className="brand">
+                    Moto<span>Shop</span>
+                </Link>
+
+                <div className="user-actions">
+                    <Link href="/login" className="btn-user" title="Iniciar sesión">
+                        <span aria-hidden="true">👤</span> Mi Cuenta
+                    </Link>
+                    <span className="btn-cart" title="Carrito de compras">
+                        <span aria-hidden="true">🛒</span> Carrito <span id="contador-carrito">0</span>
+                    </span>
+                </div>
+            </nav>
+        </header>
     );
 };
 

@@ -1,23 +1,6 @@
 const Home = () => {
   return (
     <>
-      <header>
-        <nav>
-            <a href="#top" className="brand">
-                Moto<span>Shop</span>
-            </a>
-
-            <div className="user-actions">
-                <a href="cuenta.html" className="btn-user" title="Iniciar sesión o Registrarse">
-                    <span>👤</span> Mi Cuenta
-                </a>
-                <a href="carrito.html" className="btn-cart" title="Ver Carrito de Compras">
-                    <span>🛒</span> Carrito <span id="contador-carrito">0</span>
-                </a>
-            </div>
-        </nav>
-    </header>
-
     <main>
         <section className="hero">
             <span className="hero-tag">Equipamiento de alto rendimiento</span>
@@ -39,7 +22,7 @@ const Home = () => {
                     <article className="product-card">
                         <div className="img-wrapper">
                             <span className="badge">ECE 22.06</span>
-                            <img src="img/Casco AGV K3 Solid.png" alt="Casco integral AGV K3 Negro Mate">
+                            <img src="https://raw.githubusercontent.com/NanooDev/html-ejercicio-01/main/img/Casco%20AGV%20K3%20Solid.png" alt="Casco integral AGV K3 Negro Mate"/>
                         </div>
                         <div className="card-content">
                             <h4>Casco AGV K3 Solid</h4>
@@ -55,7 +38,7 @@ const Home = () => {
                     <article className="product-card">
                         <div className="img-wrapper">
                             <span className="badge premium">Premium</span>
-                            <img src="img/Casco Shoei GT-Air 3.png" alt="Casco Shoei GT-Air 3">
+                            <img src="https://raw.githubusercontent.com/NanooDev/html-ejercicio-01/main/img/Casco%20Shoei%20GT-Air%203.png" alt="Casco Shoei GT-Air 3"/>
                         </div>
                         <div className="card-content">
                             <h4>Casco Shoei GT-Air 3</h4>
@@ -78,7 +61,7 @@ const Home = () => {
                     <article className="product-card">
                         <div className="img-wrapper">
                             <span className="badge">Impermeable</span>
-                            <img src="img/Chaqueta Alpinestar Andes V3.jpg" alt="Chaqueta Alpinestars Andes V3">
+                            <img src="https://raw.githubusercontent.com/NanooDev/html-ejercicio-01/main/img/Chaqueta%20Alpinestar%20Andes%20V3.jpg" alt="Chaqueta Alpinestars Andes V3"/>
                         </div>
                         <div className="card-content">
                             <h4>Chaqueta Alpinestars Andes V3</h4>
@@ -94,7 +77,7 @@ const Home = () => {
                     <article className="product-card">
                         <div className="img-wrapper">
                             <span className="badge">Cuero</span>
-                            <img src="img/Guantes Alpinestars Faster.jpg" alt="Guantes Alpinestars Faster">
+                            <img src="https://raw.githubusercontent.com/NanooDev/html-ejercicio-01/main/img/Guantes%20Alpinestars%20Faster.jpg" alt="Guantes Alpinestars Faster"/>
                         </div>
                         <div className="card-content">
                             <h4>Guantes Alpinestars Faster</h4>
@@ -110,7 +93,7 @@ const Home = () => {
                     <article className="product-card">
                         <div className="img-wrapper">
                             <span className="badge">Articuladas</span>
-                            <img src="img/Rodilleras Scoyco K12.png" alt="Rodilleras Scoyco K12">
+                            <img src="https://raw.githubusercontent.com/NanooDev/html-ejercicio-01/main/img/Rodilleras%20Scoyco%20K12.png" alt="Rodilleras Scoyco K12" />
                         </div>
                         <div className="card-content">
                             <h4>Rodilleras Scoyco K12</h4>
@@ -133,7 +116,7 @@ const Home = () => {
                     <article className="product-card">
                         <div className="img-wrapper">
                             <span className="badge">Protector</span>
-                            <img src="img/Kit Tank Pad Resina 3D.png" alt="Kit Protectores de Estanque">
+                            <img src="https://raw.githubusercontent.com/NanooDev/html-ejercicio-01/main/img/Kit%20Tank%20Pad%20Resina%203D.png" alt="Kit Protectores de Estanque"/>
                         </div>
                         <div className="card-content">
                             <h4>Kit Tank Pad Resina 3D</h4>
@@ -149,7 +132,7 @@ const Home = () => {
                     <article className="product-card">
                         <div className="img-wrapper">
                             <span className="badge fun">Divertido</span>
-                            <img src="img/Patito Motociclista para Manillar.png" alt="Patito motociclista de goma con casco y hélice">
+                            <img src="https://raw.githubusercontent.com/NanooDev/html-ejercicio-01/main/img/Patito%20Motociclista%20para%20Manillar.png" alt="Patito motociclista de goma con casco y hélice"/>
                         </div>
                         <div className="card-content">
                             <h4>Patito Motociclista para Manillar</h4>
@@ -165,7 +148,7 @@ const Home = () => {
                     <article className="product-card">
                         <div className="img-wrapper">
                             <span className="badge">1:12 Diecast</span>
-                            <img src="img/Moto a Escala Yamaha R1 (Maisto).png" alt="Maqueta Yamaha YZF-R1 Maisto">
+                            <img src="https://raw.githubusercontent.com/NanooDev/html-ejercicio-01/main/img/Moto%20a%20Escala%20Yamaha%20R1%20(Maisto).png" alt="Maqueta Yamaha YZF-R1 Maisto"/>
                         </div>
                         <div className="card-content">
                             <h4>Moto a Escala Yamaha R1 (Maisto)</h4>
