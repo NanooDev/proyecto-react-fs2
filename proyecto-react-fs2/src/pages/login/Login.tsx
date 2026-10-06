@@ -1,6 +1,37 @@
+import { useEffect, useState, type ChangeEvent, type FormEvent } from "react";
 import { Link } from "wouter";
 
+interface LoginForm {
+  email: string;
+  password: string;
+  remember: boolean;
+}
+
 const Login = () => {
+  const [form, setForm] = useState<LoginForm>({
+    email: "",
+    password: "",
+    remember: false,
+  });
+
+  useEffect(() => {
+    console.log("Datos del login:", form);
+  }, [form]);
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const { name, value, type, checked } = event.target;
+
+    setForm((currentForm) => ({
+      ...currentForm,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log("Login enviado:", form);
+  };
+
   return (
     <>
       <main className="auth-page">
@@ -23,20 +54,20 @@ const Login = () => {
                     <Link href="/register" className="tab-button">Registrarse</Link>
                 </div>
 
-                <form className="auth-form active" id="login-form">
+                <form className="auth-form active" id="login-form" onSubmit={handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="login-email">Correo electrónico</label>
-                        <input id="login-email" type="email" placeholder="tuemail@ejemplo.com" required/>
+                        <input id="login-email" name="email" type="email" placeholder="tuemail@ejemplo.com" value={form.email} onChange={handleChange} required/>
                     </div>
 
                     <div className="form-group">
                         <label htmlFor="login-password">Contraseña</label>
-                        <input id="login-password" type="password" placeholder="••••••••" required/>
+                        <input id="login-password" name="password" type="password" placeholder="••••••••" value={form.password} onChange={handleChange} required/>
                     </div>
 
                     <div className="form-row-inline">
                         <label className="check-inline">
-                            <input type="checkbox" />
+                                <input name="remember" type="checkbox" checked={form.remember} onChange={handleChange} />
                             <span>Recordarme</span>
                         </label>
                         <a href="#" className="text-link">¿Olvidaste tu contraseña?</a>
